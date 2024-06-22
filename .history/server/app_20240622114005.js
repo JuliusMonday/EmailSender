@@ -10,13 +10,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set up a transport for nodemailer
-const myMail = process.env.MY_MAIL || 'your-email@example.com'
-const myMailPassword = process.env.MY_MAIL_PASSWORD || 'your-email-password'
+const my
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: myMail,
-    pass: myMailPassword ,
+    user: 'jutelabs@gmail.com',
+    pass: 'SUCCESS@12me',
   },
 });
 

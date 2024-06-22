@@ -10,13 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set up a transport for nodemailer
-const myMail = process.env.MY_MAIL || 'your-email@example.com'
-const myMailPassword = process.env.MY_MAIL_PASSWORD || 'your-email-password'
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: myMail,
-    pass: myMailPassword ,
+    user: 'jutelabs@',
+    pass: 'emmagu2017',
   },
 });
 
@@ -43,7 +41,7 @@ app.post('/send-message', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'jutelabs@gmail.com', 
+    to: 'emmachristech@gmail.com', 
     subject: subject,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
